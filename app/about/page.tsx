@@ -24,7 +24,7 @@ export default function AboutPage() {
     {
       id: 1,
       type: "image",
-      image: "/images/creator_podcast_host.jpg",
+      image: "/__.png",
       alt: "Creator hosting a podcast with microphone",
       name: "Marcus Vance",
       role: "Podcast Host & Creator",
@@ -39,7 +39,7 @@ export default function AboutPage() {
     {
       id: 3,
       type: "image",
-      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=900&auto=format&fit=crop&q=80",
+      image: "/1_.png",
       alt: "Creator in studio",
       name: "Elena Rostova",
       role: "Visual Artist & Founder",
@@ -146,7 +146,7 @@ export default function AboutPage() {
               {/* CARD 2: Smiling Creator with Podcast Mic */}
               <div className="relative w-[280px] sm:w-[310px] md:w-[325px] h-[390px] sm:h-[430px] md:h-[460px] overflow-hidden transform -rotate-1 sm:-rotate-2 hover:rotate-0 hover:scale-105 hover:z-40 transition-all duration-500 z-20 group cursor-pointer">
                 <Image
-                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=900&auto=format&fit=crop&q=80"
+                  src="/__.png"
                   alt="Creator hosting a podcast"
                   fill
                   sizes="350px"
@@ -178,7 +178,7 @@ export default function AboutPage() {
               {/* CARD 4: Bearded Creator with Headphones and Silver Mic at Desk */}
               <div className="relative w-[280px] sm:w-[310px] md:w-[325px] h-[390px] sm:h-[430px] md:h-[460px] overflow-hidden transform rotate-4 sm:rotate-6 hover:rotate-0 hover:scale-105 hover:z-40 transition-all duration-500 z-20 group cursor-pointer">
                 <Image
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&auto=format&fit=crop&q=80"
+                  src="/1_.png"
                   alt="Creator at studio desk"
                   fill
                   sizes="350px"
@@ -249,7 +249,7 @@ export default function AboutPage() {
                 }`}
               >
                 <Image
-                  src="/images/creator_podcast_host.jpg"
+                  src="/__.png"
                   alt="Creator hosting a podcast with microphone"
                   fill
                   sizes="260px"
@@ -284,7 +284,7 @@ export default function AboutPage() {
                 }`}
               >
                 <Image
-                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=900&auto=format&fit=crop&q=80"
+                  src="/1_.png"
                   alt="Creator in studio"
                   fill
                   sizes="260px"
@@ -364,7 +364,7 @@ export default function AboutPage() {
               {/* Left Column: Image with rounded corners */}
               <div className="lg:col-span-6 relative aspect-[16/11] sm:aspect-[4/3] overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1200&auto=format&fit=crop&q=80"
+                  src="/mission.png"
                   alt="Creator working at desk on tools that matter"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -406,7 +406,7 @@ export default function AboutPage() {
               {/* Right Column: Image */}
               <div className="lg:col-span-6 relative aspect-[16/11] sm:aspect-[4/3] overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1531497865144-0464ef8fb9a9?w=1200&auto=format&fit=crop&q=80"
+                  src="/vision.png"
                   alt="Creator recording video on smartphone tripod"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"

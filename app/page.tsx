@@ -73,65 +73,65 @@ const carouselItems: CarouselCard[] = [
 const workCol1: WorkProject[] = [
   {
     id: 1,
-    title: "NOVA HOUSE",
-    category: "Branding, Web Design",
+    title: "Mouliq",
+    category: "Brand Identity, Packaging",
     year: "2026",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&auto=format&fit=crop&q=80",
+    image: "/Mouliq/Mouli Logo.png",
   },
   {
     id: 2,
-    title: "NOVA HOUSE",
-    category: "Branding, Web Design",
+    title: "PP Green City",
+    category: "Website Strategy, UI/UX",
     year: "2026",
-    image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&auto=format&fit=crop&q=80",
+    image: "/PP green/149.png",
   },
   {
     id: 3,
-    title: "NOVA HOUSE",
-    category: "Branding, Web Design",
+    title: "Kalky by Nitika",
+    category: "Creative Direction, Fashion",
     year: "2026",
-    image: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&auto=format&fit=crop&q=80",
+    image: "/Kalky by Nitika/1.png",
   },
 ];
 
 const workCol2: WorkProject[] = [
   {
     id: 4,
-    title: "NOVA HOUSE",
-    category: "Branding, Web Design",
+    title: "Galaxy & Sawasdee Group",
+    category: "Social Media, Digital Growth",
     year: "2026",
-    image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800&auto=format&fit=crop&q=80",
+    image: "/Galaxy Sawasdee/146.png",
   },
   {
     id: 5,
-    title: "NOVA HOUSE",
-    category: "Branding, Web Design",
+    title: "Patanjali",
+    category: "Influencer Marketing",
     year: "2026",
-    image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop&q=80",
+    image: "/Patanjali/cherish story (3).png",
   },
 ];
 
 const workCol3: WorkProject[] = [
   {
     id: 6,
-    title: "NOVA HOUSE",
-    category: "Branding, Web Design",
+    title: "Mouliq",
+    category: "Brand Identity, Packaging",
     year: "2026",
-    image: "https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?w=800&auto=format&fit=crop&q=80",
+    image: "/Mouliq/mouliq 2.png",
   },
   {
     id: 7,
-    title: "NOVA HOUSE",
-    category: "Branding, Web Design",
+    title: "PP Green City",
+    category: "Website Strategy, UI/UX",
     year: "2026",
-    image: "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=800&auto=format&fit=crop&q=80",
+    image: "/PP green/150.png",
   },
   {
     id: 8,
-    title: "NOVA HOUSE",
-    category: "Branding, Web Design",
+    title: "Kalky by Nitika",
+    category: "Creative Direction, Fashion",
     year: "2026",
-    image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&auto=format&fit=crop&q=80",
+    image: "/Kalky by Nitika/2.png",
   },
 ];
 
@@ -205,6 +205,42 @@ export default function Home() {
                 </div>
               </React.Fragment>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Brand Video / Showreel Section */}
+      <section className="w-full pt-16 sm:pt-20 md:pt-28 pb-0 bg-[#FFFFFF] text-[#0C3852] relative z-20 overflow-hidden">
+        {/* Centered Headline */}
+        <div className="max-w-5xl mx-auto text-center px-4 sm:px-6 lg:px-8 mb-10 sm:mb-14 md:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-medium text-[#0C3852] tracking-tight leading-[1.25] uppercase">
+            ALL THINGS DIGITAL: ONE CREATIVE PARTNER FOR EVERYTHING YOUR BRAND NEEDS TO{" "}
+            <span className="font-gochi text-[#3CA8D9] font-normal lowercase tracking-normal text-[1.2em] inline-block">
+              show up
+            </span>
+            ,{" "}
+            <span className="font-gochi text-[#3CA8D9] font-normal lowercase tracking-normal text-[1.2em] inline-block">
+              stand out
+            </span>
+            , AND{" "}
+            <span className="font-gochi text-[#3CA8D9] font-normal lowercase tracking-normal text-[1.2em] inline-block">
+              stay relevant
+            </span>{" "}
+            ONLINE.
+          </h2>
+        </div>
+
+        {/* Video / Image Container with max-w-8xl and reduced height */}
+        <div className="w-full max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 sm:pb-20 md:pb-28">
+          <div className="relative w-full aspect-[16/9] min-h-[280px] sm:min-h-[380px] md:min-h-[460px] max-h-[720px] bg-[#E2E8F0] overflow-hidden group">
+            <video
+              src="/cavuereel.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
           </div>
         </div>
       </section>
@@ -519,42 +555,6 @@ export default function Home() {
             >
               View More services
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Brand Video / Showreel Section */}
-      <section className="w-full pt-16 sm:pt-20 md:pt-28 pb-0 bg-[#FFFFFF] text-[#0C3852] relative z-20 overflow-hidden">
-        {/* Centered Headline */}
-        <div className="max-w-5xl mx-auto text-center px-4 sm:px-6 lg:px-8 mb-10 sm:mb-14 md:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-medium text-[#0C3852] tracking-tight leading-[1.25] uppercase">
-            ALL THINGS DIGITAL: ONE CREATIVE PARTNER FOR EVERYTHING YOUR BRAND NEEDS TO{" "}
-            <span className="font-gochi text-[#3CA8D9] font-normal lowercase tracking-normal text-[1.2em] inline-block">
-              show up
-            </span>
-            ,{" "}
-            <span className="font-gochi text-[#3CA8D9] font-normal lowercase tracking-normal text-[1.2em] inline-block">
-              stand out
-            </span>
-            , AND{" "}
-            <span className="font-gochi text-[#3CA8D9] font-normal lowercase tracking-normal text-[1.2em] inline-block">
-              stay relevant
-            </span>{" "}
-            ONLINE.
-          </h2>
-        </div>
-
-        {/* Video / Image Container with max-w-8xl and reduced height */}
-        <div className="w-full max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 sm:pb-20 md:pb-28">
-          <div className="relative w-full aspect-[16/9] min-h-[280px] sm:min-h-[380px] md:min-h-[460px] max-h-[720px] bg-[#E2E8F0] overflow-hidden group">
-            <video
-              src="/cavuereel.mp4"
-              autoPlay
-              muted
-              loop
-              playsInline
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-            />
           </div>
         </div>
       </section>

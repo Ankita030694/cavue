@@ -40,320 +40,237 @@ export interface ProjectDetail {
 }
 
 export const projectsDatabase: Record<string, ProjectDetail> = {
-  novaskin: {
-    slug: "novaskin",
-    title: "NovaSkin",
-    subtitle:
-      "Clean skincare brand targeting Gen Z and Millennial consumers with dermatologist-formulated products.",
-    heroImage:
-      "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=1600&auto=format&fit=crop&q=85",
-    livePreviewUrl: "https://novaskin.com",
-    industry: "Beauty & Personal Care",
-    services: "Influencer Marketing, UGC Campaigns, Short form - Video, Brand Strategy",
-    year: "2024",
+  "mouliq": {
+    slug: "mouliq",
+    title: "Mouliq",
+    subtitle: "A Story Rooted in One Origin.",
+    heroImage: "/Mouliq/Mouli Logo.png",
+    industry: "FMCG",
+    services: "Brand Identity · Logo Design · Packaging Design",
+    year: "2026",
     accentColor: "text-[#A28CFF]",
     challenge: {
-      heading: "Strong Products, Weak Social Performance",
-      description:
-        "Despite offering clinically backed skincare at accessible prices, NovaSkin struggled to stand out online. Inconsistent content, low engagement, and an inactive TikTok presence limited audience growth and prevented the brand from communicating its true value.",
+      heading: "The Objective",
+      description: "The aim was to translate Mouliq's single-origin philosophy into a simple and recognisable visual identity. The branding needed to communicate the idea behind the brand without making the design unnecessarily complicated, while extending naturally across its product packaging.",
     },
     strategy: {
-      heading: "Education-Led Content That Built Trust",
-      description:
-        "We shifted the focus from product promotion to audience education, creating consistent short-form content around ingredients, routines, and real results. A unified visual identity, UGC system, and rigorous hook testing improved performance across platforms.",
+      heading: "Strategy and creative execution",
+      description: "The logo was designed to remain simple and aligned with Mouliq's tonality. Rather than relying on unnecessary visual elements, the identity incorporates an icon representing the idea of a single origin being brought to people. With the brand identity established, Cavue developed product packaging that carried the same design direction forward.",
       images: [
-        "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=900&auto=format&fit=crop&q=80",
-        "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=900&auto=format&fit=crop&q=80",
+        "/Mouliq/mouliq 2.png",
+        "/Mouliq/mouliq 3.png",
       ],
     },
     results: {
-      heading: "Rapid Growth Across Every Metric",
-      description:
-        "The new strategy transformed NovaSkin's social presence, driving significant audience growth, stronger engagement, and millions of video views. Consistent content and clear messaging helped establish credibility while accelerating brand awareness at scale.",
+      heading: "A Cohesive Brand Language",
+      description: "The focus throughout the project was alignment. From the central identity to the packaging, every element was approached as part of the same brand system. This helped translate Mouliq's single-origin proposition into a unified visual direction rather than treating the logo and packaging as separate design exercises.",
       images: [
-        "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=900&auto=format&fit=crop&q=80",
-        "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=900&auto=format&fit=crop&q=80",
+        "/Mouliq/mouliq 4.png",
+        "/Mouliq/Mouli Logo.png",
       ],
       metrics: [
         {
-          value: "+280%",
-          label: "Follower Growth in 90 Days",
+          value: "100%",
+          label: "Visual Consistency",
           bg: "bg-[#9C84FF] text-[#111827]",
         },
         {
-          value: "4.1M",
-          label: "Total Reel Views (First 3 Months)",
+          value: "1",
+          label: "Unified Identity System",
           bg: "bg-[#F9A048] text-[#111827]",
         },
         {
-          value: "6.2%",
-          label: "Average Engagement Rate",
+          value: "Clear",
+          label: "Single-Origin Proposition",
           bg: "bg-[#0EA5E9] text-white",
         },
       ],
     },
   },
-  "aura-botanical": {
-    slug: "aura-botanical",
-    title: "Aura Botanical",
-    subtitle:
-      "Organic, plant-derived botanical wellness formulations crafted for everyday mindful restoration.",
-    heroImage:
-      "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=1600&auto=format&fit=crop&q=85",
-    livePreviewUrl: "https://aurabotanical.com",
-    industry: "Skincare & Wellness",
-    services: "Paid Performance Media, Paid TikTok Ads, Creative Strategy",
-    year: "2025",
+  "pp-green-city": {
+    slug: "pp-green-city",
+    title: "PP Green City",
+    subtitle: "Building a Digital Address.",
+    heroImage: "/PP green/149.png",
+    industry: "Real Estate",
+    services: "Website Strategy · UI/UX Design · Website Development",
+    year: "2026",
     accentColor: "text-[#FB7185]",
     challenge: {
-      heading: "High Production Costs, Low Customer Retention",
-      description:
-        "Aura Botanical had a cult following locally, but lacked a cohesive digital conversion funnel. High acquisition costs on generic social ads drained budgets without building long-term recurring subscriptions.",
+      heading: "The Objective",
+      description: "The objective was to establish a professional online presence that would showcase PP Green City's offering, organise relevant project information, and provide visitors with a straightforward way to understand the brand and its proposition.",
     },
     strategy: {
-      heading: "Ritual-Centric Storytelling & High-Converting Paid Creatives",
-      description:
-        "We restructured Aura's creative testing pipeline with over 40 weekly video variations focusing on sensory morning routines, unboxing experiences, and transparent ingredient efficacy reviews.",
+      heading: "Website Structure & Planning",
+      description: "Cavue developed the visual direction and page layouts to present PP Green City in a professional, consistent manner. The focus was on clear information hierarchy, intuitive navigation, and a design approach suited to the real estate category.",
       images: [
-        "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=900&auto=format&fit=crop&q=80",
-        "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=900&auto=format&fit=crop&q=80",
+        "/PP green/150.png",
+        "/PP green/151.png",
       ],
     },
     results: {
-      heading: "Tripled Return on Ad Spend & Record Repeat Orders",
-      description:
-        "Within 6 months, paid revenue quadrupled while lowering customer acquisition cost by 44%. Aura scaled from a boutique brand into an omnichannel retail powerhouse.",
+      heading: "Testing & Final Delivery",
+      description: "The website was reviewed against the agreed scope, with attention to page presentation, navigation, content, and functionality. The completed website brought PP Green City's brand and real estate offering into one accessible digital destination.",
       images: [
-        "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=900&auto=format&fit=crop&q=80",
-        "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=900&auto=format&fit=crop&q=80",
+        "/PP green/149.png",
+        "/PP green/150.png",
       ],
       metrics: [
         {
-          value: "3.4x",
-          label: "ROAS on Performance Media",
+          value: "100%",
+          label: "Scope Delivered",
           bg: "bg-[#FDA4AF] text-[#111827]",
         },
         {
-          value: "$1.8M",
-          label: "Gross Revenue in 6 Months",
+          value: "Clear",
+          label: "Information Hierarchy",
           bg: "bg-[#FBBF24] text-[#111827]",
         },
         {
-          value: "42%",
-          label: "Repeat Subscription Rate",
+          value: "Intuitive",
+          label: "User Navigation",
           bg: "bg-[#38BDF8] text-white",
         },
       ],
     },
   },
-  "verve-eyewear": {
-    slug: "verve-eyewear",
-    title: "Verve Eyewear",
-    subtitle:
-      "Handcrafted Japanese titanium sunglasses engineered for modernist aesthetics and ultimate lightness.",
-    heroImage:
-      "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=1600&auto=format&fit=crop&q=85",
-    livePreviewUrl: "https://verve-eyewear.com",
-    industry: "Luxury & Lifestyle",
-    services: "Art Direction, Influencer Seeding, 3D CGI Motion, Web Experience",
-    year: "2024",
+  "kalky-by-nitika": {
+    slug: "kalky-by-nitika",
+    title: "Kalky by Nitika",
+    subtitle: "Festive Elegance, Captured.",
+    heroImage: "/Kalky by Nitika/1.png",
+    industry: "Fashion Label",
+    services: "Creative Direction · Fashion Shoot · Content Production",
+    year: "2026",
     accentColor: "text-[#60A5FA]",
     challenge: {
-      heading: "Premium Craftsmanship Trapped in Crowded Market Noise",
-      description:
-        "Verve produced exceptional frames, but legacy marketing channels failed to reach design-forward buyers. Digital touchpoints lacked the tactile luxury feel of their physical frames.",
+      heading: "The Objective",
+      description: "The objective was to create content for the festive collection that felt elegant, refined, and aligned with the brand. The visual storytelling needed to showcase the outfits while capturing the occasion, mood, and sophistication associated with festive dressing.",
     },
     strategy: {
-      heading: "Cinematic Visuals & Global Creative Tastemaker Seeding",
-      description:
-        "We engineered high-fashion 3D exploding-lens product videos, paired with targeted gifting to influential architects, photographers, and creative directors worldwide.",
+      heading: "Creative Direction & Styling",
+      description: "We established a visual direction around elegance and festive sophistication. The visual approach centred on presenting the garments with care, allowing their silhouettes, embroidery, textures, and design details to remain in focus.",
       images: [
-        "https://images.unsplash.com/photo-1508296695146-257a814070b4?w=900&auto=format&fit=crop&q=80",
-        "https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?w=900&auto=format&fit=crop&q=80",
+        "/Kalky by Nitika/2.png",
+        "/Kalky by Nitika/3.png",
       ],
     },
     results: {
-      heading: "Global Virality & Sold-Out Capsule Drops",
-      description:
-        "Organic impressions skyrocketed past 4.8 million within 60 days. Every seasonal limited capsule drop sold out within 48 hours of announcement.",
+      heading: "A Cohesive Visual Story",
+      description: "The creative direction was built around maintaining consistency across the collection's visual presentation. The intention was to create content that could communicate the festive mood while remaining true to Kalky by Nitika's brand identity.",
       images: [
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&auto=format&fit=crop&q=80",
-        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=900&auto=format&fit=crop&q=80",
+        "/Kalky by Nitika/4_.png",
+        "/Kalky by Nitika/5.png",
       ],
       metrics: [
         {
-          value: "4.8M",
-          label: "Organic Social Impressions",
+          value: "Elegant",
+          label: "Visual Storytelling",
           bg: "bg-[#93C5FD] text-[#111827]",
         },
         {
-          value: "100%",
-          label: "Capsule Sellout Rate in 48h",
+          value: "Refined",
+          label: "Brand Identity",
           bg: "bg-[#FCD34D] text-[#111827]",
         },
         {
-          value: "+310%",
-          label: "Direct Site Traffic Growth",
+          value: "Detailed",
+          label: "Garment Presentation",
           bg: "bg-[#2563EB] text-white",
         },
       ],
     },
   },
-  "lumina-glow": {
-    slug: "lumina-glow",
-    title: "Lumina Glow",
-    subtitle:
-      "Next-generation bio-fermented serum brand setting a new standard in radiant, restorative skin barrier health.",
-    heroImage:
-      "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1600&auto=format&fit=crop&q=85",
-    livePreviewUrl: "https://luminaglow.com",
-    industry: "Beauty & Biotech",
-    services: "TikTok Shop Strategy, UGC Creator Management, CRO, Brand Identity",
-    year: "2025",
+  "galaxy-sawasdee": {
+    slug: "galaxy-sawasdee",
+    title: "Galaxy & Sawasdee Group",
+    subtitle: "Building a Stronger Digital Presence for a Real Estate Group",
+    heroImage: "/Galaxy Sawasdee/146.png",
+    industry: "Real Estate",
+    services: "Social Media Management · Content Strategy · Personal Branding · Digital Growth",
+    year: "2026",
     accentColor: "text-[#A28CFF]",
     challenge: {
-      heading: "New Category Launch with High Science Jargon",
-      description:
-        "Lumina’s proprietary bio-ferment technology sounded overly clinical for mainstream consumers. They needed to turn complex biotech patents into relatable skincare joy.",
+      heading: "The Objective",
+      description: "To establish a more cohesive digital identity for the group, strengthen its online visibility, and build a social media presence that reflected the larger organisation rather than focusing solely on individual projects.",
     },
     strategy: {
-      heading: "Micro-Creator Education & Visual Texture Campaigns",
-      description:
-        "We mobilized a fleet of 150+ micro-creators to demonstrate the product's instant hydration glass-skin glow, emphasizing before-and-after skin texture transformations.",
+      heading: "Building a Group-Level Digital Identity",
+      description: "We shaped the content approach to balance project-led communication with brand-building content. One of the key initiatives was introducing Director’s Desk, a content IP featuring the Managing Director to share insights and perspectives.",
       images: [
-        "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=900&auto=format&fit=crop&q=80",
-        "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=900&auto=format&fit=crop&q=80",
+        "/Galaxy Sawasdee/147.png",
+        "/Galaxy Sawasdee/148.png",
       ],
     },
     results: {
-      heading: "Viral TikTok Shop Phenomenon & 185% YoY Growth",
-      description:
-        "Lumina became one of the fastest trending skincare brands in the beauty ecosystem, unlocking exponential repeat purchases and top-tier retail placement.",
+      heading: "Growing the Brand’s Digital Presence",
+      description: "Through consistent social media management and a more considered content direction, we focused on strengthening the group’s visibility and building a recognisable presence over time, balancing property updates with brand-building.",
       images: [
-        "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=900&auto=format&fit=crop&q=80",
-        "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=900&auto=format&fit=crop&q=80",
+        "/Galaxy Sawasdee/146.png",
+        "/Galaxy Sawasdee/147.png",
       ],
       metrics: [
         {
-          value: "+185%",
-          label: "Direct-to-Consumer Growth",
+          value: "Cohesive",
+          label: "Digital Identity",
           bg: "bg-[#9C84FF] text-[#111827]",
         },
         {
-          value: "35K+",
-          label: "Units Sold on Launch Month",
+          value: "New IP",
+          label: "Director's Desk Series",
           bg: "bg-[#F97316] text-white",
         },
         {
-          value: "8.4%",
-          label: "Shopify Store Conversion Rate",
+          value: "Stronger",
+          label: "Online Visibility",
           bg: "bg-[#06B6D4] text-white",
         },
       ],
     },
   },
-  "solstice-studio": {
-    slug: "solstice-studio",
-    title: "Solstice Studio",
-    subtitle:
-      "Contemporary unisex silhouettes crafted from sustainable deadstock textiles and deadweight organic cottons.",
-    heroImage:
-      "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=1600&auto=format&fit=crop&q=85",
-    livePreviewUrl: "https://solsticestudio.com",
-    industry: "Fashion & Apparel",
-    services: "Lookbook Photography, Community Discord, E-Commerce Development",
-    year: "2024",
+  "patanjali": {
+    slug: "patanjali",
+    title: "Patanjali",
+    subtitle: "Taking Everyday Products to Audiences Across India",
+    heroImage: "/Patanjali/cherish story (3).png",
+    industry: "FMCG",
+    services: "Influencer Marketing · Creator Strategy · Pan-India Campaign Management",
+    year: "2026",
     accentColor: "text-[#FACC15]",
     challenge: {
-      heading: "Sustainable Fashion Without the Boring Clichés",
-      description:
-        "Most sustainable fashion was perceived as bland and beige. Solstice needed a bold, underground cultural edge that resonated with youth streetwear culture.",
+      heading: "The Objective",
+      description: "To strengthen product visibility through influencer marketing, reaching diverse audiences across regions, languages, and content categories while maintaining consistency with the brand.",
     },
     strategy: {
-      heading: "Raw Editorial Visuals & Exclusive Drop Mechanics",
-      description:
-        "We built an edgy aesthetic with VHS-inspired motion teasers, community-gated early access drop codes, and live stream studio workshops showing piece construction.",
+      heading: "Influencer Strategy & Outreach",
+      description: "We identified and engaged relevant creators across content categories, audience profiles, languages, and regions, aligning creator selection with product relevance and campaign objectives.",
       images: [
-        "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=900&auto=format&fit=crop&q=80",
-        "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=900&auto=format&fit=crop&q=80",
+        "/Patanjali/cherish story (3).png",
+        "/Patanjali/cherish story (4).png",
       ],
     },
     results: {
-      heading: "A Hyper-Loyal Cult Following & Instant Sellouts",
-      description:
-        "Solstice amassed over 12,000 active community members and became an internationally recognized staple featured in leading style magazines.",
+      heading: "Project Impact",
+      description: "From creator outreach and briefing to coordination, content approvals, and publishing, we managed the campaign process hands-on, working as an extended influencer marketing partner.",
       images: [
-        "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=900&auto=format&fit=crop&q=80",
-        "https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?w=900&auto=format&fit=crop&q=80",
+        "/Patanjali/cherish story (4).png",
+        "/Patanjali/cherish story (3).png",
       ],
       metrics: [
         {
-          value: "12.4K",
-          label: "Community Members Added",
+          value: "5M+",
+          label: "Views",
           bg: "bg-[#FDE047] text-[#111827]",
         },
         {
-          value: "94%",
-          label: "Customer Satisfaction Rating",
+          value: "₹0.25",
+          label: "CPV",
           bg: "bg-[#A78BFA] text-[#111827]",
         },
         {
-          value: "4.2x",
-          label: "Lifetime Value (LTV) Increase",
+          value: "Pan-India",
+          label: "Reach",
           bg: "bg-[#10B981] text-white",
-        },
-      ],
-    },
-  },
-  "kinetic-sound": {
-    slug: "kinetic-sound",
-    title: "Kinetic Sound",
-    subtitle:
-      "Audiophile-grade wireless planar magnetic studio monitors designed for music producers and creative purists.",
-    heroImage:
-      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=1600&auto=format&fit=crop&q=85",
-    livePreviewUrl: "https://kineticsound.com",
-    industry: "Tech & Audio Hardware",
-    services: "Sound Design, 3D Product Renders, Kickstarter Campaign, PR",
-    year: "2025",
-    accentColor: "text-[#34D399]",
-    challenge: {
-      heading: "Breaking Into a Monopoly Dominated by Legacy Tech Giants",
-      description:
-        "Kinetic Sound possessed superior audio fidelity but struggled to build consumer brand authority without million-dollar traditional TV media budgets.",
-    },
-    strategy: {
-      heading: "Blind Audio Reactions & Creator Studio Integrations",
-      description:
-        "We placed Kinetic headphones in top Grammy-winning recording studios, capturing authentic blind listening tests that went viral across YouTube and tech blogs.",
-      images: [
-        "https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=900&auto=format&fit=crop&q=80",
-        "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=900&auto=format&fit=crop&q=80",
-      ],
-    },
-    results: {
-      heading: "Crowdfunding Record & 88% Brand Sentiment Uplift",
-      description:
-        "The campaign reached 500% of its initial funding goal in 72 hours, cementing Kinetic Sound as the premier emerging audiophile hardware brand.",
-      images: [
-        "https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=900&auto=format&fit=crop&q=80",
-        "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=900&auto=format&fit=crop&q=80",
-      ],
-      metrics: [
-        {
-          value: "88%",
-          label: "Brand Sentiment Uplift",
-          bg: "bg-[#6EE7B7] text-[#111827]",
-        },
-        {
-          value: "$2.4M",
-          label: "First-Year Unit Sales",
-          bg: "bg-[#38BDF8] text-white",
-        },
-        {
-          value: "#1",
-          label: "Trending Tech Product on Product Hunt",
-          bg: "bg-[#F472B6] text-white",
         },
       ],
     },

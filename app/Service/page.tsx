@@ -8,6 +8,7 @@ import Footer from "../component/footer";
 
 interface ServiceDetail {
   id: number;
+  slug: string;
   title: string;
   tags: string[];
   description: string;
@@ -17,67 +18,86 @@ interface ServiceDetail {
 const servicesData: ServiceDetail[] = [
   {
     id: 1,
-    title: "Marketing Strategy",
-    tags: ["Positioning", "Growth planning", "Brand strategy"],
+    slug: "social-media-management",
+    title: "Social Media Management",
+    tags: ["Strategy", "Content planning", "Creative", "Performance"],
     description:
-      "We define the strategic foundation that sets your brand apart. By analyzing market dynamics, audience psychology, and competitor gaps, we construct clear roadmaps that scale visibility and customer conversion.",
+      "Built to stay relevant. We help brands build a consistent and meaningful social media presence through strategy, content planning, creative development, and performance analysis. Our social media management services are tailored to your audience, industry, and business goals, helping your brand stay relevant and build lasting connections across platforms.",
     deliverables: [
-      "Brand Positioning & Voice Architecture",
-      "Full-Funnel Growth Roadmap & KPI Framework",
-      "Audience Segmentation & Persona Intelligence",
-      "Competitive Edge & Category Differentiation Strategy",
+      "Social Media Strategy & Planning",
+      "Creative Development & Content Creation",
+      "Audience & Industry Tailored Management",
+      "Performance Analysis & Reporting",
     ],
   },
   {
     id: 2,
-    title: "Social Media Management",
-    tags: ["Channel growth", "Community", "Engagement"],
+    slug: "content-production",
+    title: "Content Production",
+    tags: ["Brand films", "Photography", "Campaign assets", "Reels"],
     description:
-      "Turn your social channels into high-velocity engines for awareness, brand loyalty, and cultural conversation. We handle end-to-end creative direction, publishing, and community engagement.",
+      "Made to be noticed. From concept development to the final frame, we create purposeful visual content that brings your brand to life. Our content production services include reels, brand films, product photography, lifestyle shoots, campaign assets, and digital-first video content designed to capture attention and communicate your brand story.",
     deliverables: [
-      "Daily Content Scheduling & Cross-Platform Management",
-      "Proactive Community Moderation & Outreach",
-      "Real-time Cultural Trend Hijacking & Reactive Content",
-      "Monthly Growth Analytics & Conversion Reporting",
+      "Concept Development & Visual Storytelling",
+      "Reels, Brand Films & Digital-First Video",
+      "Product Photography & Lifestyle Shoots",
+      "Campaign Asset Creation & Production",
     ],
   },
   {
     id: 3,
-    title: "Content Production & AI Video",
-    tags: ["Video production", "Motion design", "AI creative"],
+    slug: "branding",
+    title: "Branding",
+    tags: ["Brand strategy", "Identity design", "Packaging", "Guidelines"],
     description:
-      "From cinematic high-production reels to AI-generated hyper-personalized videos and 3D visual assets, we produce content engineered to capture attention and spark curiosity.",
+      "Made to be remembered. We build distinctive brand identities rooted in strategy, positioning, and purpose. From brand strategy and naming to logo design, visual identity, packaging, and brand guidelines, we help businesses create a cohesive identity that reflects who they are and makes them recognisable across every touchpoint.",
     deliverables: [
-      "Short-Form Video (Reels, TikToks, Shorts)",
-      "High-Fidelity AI Video Generation & Synthesis",
-      "3D Product Visuals & Motion Graphics",
-      "Studio Photography & Creative Art Direction",
+      "Brand Strategy, Naming & Positioning",
+      "Logo Design & Visual Identity Systems",
+      "Packaging Design & Experience",
+      "Comprehensive Brand Guidelines",
     ],
   },
   {
     id: 4,
-    title: "Paid Performance Marketing",
-    tags: ["Meta Ads", "Google Search", "ROI scaling"],
+    slug: "influencer-marketing",
+    title: "Influencer Marketing",
+    tags: ["Creator discovery", "Outreach", "Campaign management", "Negotiations"],
     description:
-      "Data-driven paid media campaigns designed for maximum return on ad spend. We constantly test creative variants, optimize bidding models, and build high-converting landing experiences.",
+      "Built on influence. We connect brands with creators who speak to the right audiences. Our influencer marketing services cover creator discovery, influencer outreach, campaign strategy, negotiations, content coordination, campaign management, and performance reporting. Every collaboration is selected to align with your brand, audience, and campaign objectives.",
     deliverables: [
-      "Multi-Channel Campaign Architecture (Meta, Google, TikTok)",
-      "Continuous Creative A/B Variant Testing",
-      "Audience Retargeting & Lookalike Modeling",
-      "Live Performance Dashboards & Revenue Tracking",
+      "Creator Discovery & Influencer Outreach",
+      "Campaign Strategy & Content Coordination",
+      "Negotiations & Partnership Management",
+      "Performance Reporting & Analytics",
     ],
   },
   {
     id: 5,
-    title: "Web Design & Digital Experiences",
-    tags: ["UI/UX design", "Next.js development", "Interactive 3D"],
+    slug: "performance-marketing",
+    title: "Performance Marketing",
+    tags: ["Paid social", "Meta Ads", "Audience targeting", "Lead generation"],
     description:
-      "We design and engineer bespoke web experiences that leave a lasting impression. Fast, responsive, accessible, and optimized to turn visitors into lifelong advocates.",
+      "Built to perform. We turn marketing objectives into measurable digital campaigns. Through paid social advertising, Meta Ads, audience targeting, creative testing, lead generation, and ongoing optimisation, we help businesses reach relevant audiences and improve campaign efficiency. Every campaign is guided by clear objectives and data-informed decisions.",
     deliverables: [
-      "Custom UI/UX & Interactive Design Systems",
-      "Next.js & Modern Web Stack Engineering",
-      "Conversion Rate Optimization (CRO)",
-      "SEO Architecture & Technical Speed Optimization",
+      "Paid Social Advertising & Meta Ads",
+      "Audience Targeting & Lead Generation",
+      "Creative Testing & Ongoing Optimisation",
+      "Data-Informed Campaign Management",
+    ],
+  },
+  {
+    id: 6,
+    slug: "website-design-development",
+    title: "Website Design & Development",
+    tags: ["UI/UX design", "Responsive", "Landing pages", "SEO-friendly"],
+    description:
+      "Built for the digital world. We design and develop websites that combine thoughtful visual design with intuitive user experiences. From business websites and landing pages to brand-led digital experiences, we bring together responsive design, clear navigation, purposeful content, and SEO-friendly foundations to help your website represent your brand and support your business goals.",
+    deliverables: [
+      "Thoughtful Visual Design & UI/UX",
+      "Business Websites & Landing Pages",
+      "Responsive Design & Clear Navigation",
+      "SEO-Friendly Foundations & Optimization",
     ],
   },
 ];
@@ -138,7 +158,7 @@ export default function ServicesPage() {
               <div className="flex flex-col divide-y divide-black/[0.08] border-t border-black/[0.08]">
                 <div className="flex items-center justify-between py-3.5 sm:py-4 text-xs sm:text-sm">
                   <span className="text-[#6B899E]">Disciplines</span>
-                  <span className="font-semibold text-[#0C3852]">Five</span>
+                  <span className="font-semibold text-[#0C3852]">Six</span>
                 </div>
                 <div className="flex items-center justify-between py-3.5 sm:py-4 text-xs sm:text-sm">
                   <span className="text-[#6B899E]">Engagement</span>
@@ -238,6 +258,17 @@ export default function ServicesPage() {
                                 </li>
                               ))}
                             </ul>
+                            <div className="mt-6">
+                              <Link
+                                href={`/Service/${service.slug}`}
+                                className="inline-flex items-center text-sm font-semibold text-[#0C3852] hover:text-[#3CA8D9] transition-colors"
+                              >
+                                View full service details
+                                <svg className="w-4 h-4 ml-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                  <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                              </Link>
+                            </div>
                           </div>
                         </div>
                       </div>
