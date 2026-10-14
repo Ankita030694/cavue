@@ -223,14 +223,37 @@ export const servicesDatabase: Record<string, ServiceDetailFull> = {
   },
 };
 
+export const slugAliases: Record<string, string> = {
+  "social-media": "social-media-management",
+  "social-media-marketing": "social-media-management",
+  "content-creation": "content-production",
+  "content": "content-production",
+  "brand-strategy": "branding",
+  "brand-identity": "branding",
+  "influencer": "influencer-marketing",
+  "influencers": "influencer-marketing",
+  "performance": "performance-marketing",
+  "paid-ads": "performance-marketing",
+  "web-development": "website-design-development",
+  "web-design": "website-design-development",
+  "website-design": "website-design-development",
+};
+
 export default function ServiceSlugPage() {
   const params = useParams();
-  const slugParam = typeof params?.slug === "string" ? params.slug : Array.isArray(params?.slug) ? params.slug[0] : "";
-  const service = servicesDatabase[slugParam];
+  const rawSlug = typeof params?.slug === "string" ? params.slug : Array.isArray(params?.slug) ? params.slug[0] : "";
+  const normalizedSlug = rawSlug.toLowerCase();
+  const targetSlug = slugAliases[normalizedSlug] || normalizedSlug;
+  const service = servicesDatabase[targetSlug];
 
   if (!service) {
     return notFound();
   }
+
+  // Other services for the bottom exploration section
+  const otherServices = Object.values(servicesDatabase).filter(
+    (s) => s.slug !== service.slug
+  );
 
   return (
     <div className="min-h-screen flex flex-col bg-[#FAFAFA] text-[#0C3852] font-sans selection:bg-[#3CA8D9] selection:text-white">
@@ -240,10 +263,10 @@ export default function ServiceSlugPage() {
       <main className="w-full pt-4 sm:pt-6 pb-20 sm:pb-28">
         <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Top Bar with Back Button */}
-          <div className="flex items-center justify-between py-4 mb-4">
+          <div className="flex items-center justify-between py-4 mb-4 border-b border-black/[0.06]">
             <Link
               href="/Service"
-              className="inline-flex items-center gap-2 px-5 py-2 bg-white text-[#0C3852] font-medium text-xs sm:text-sm border border-black/[0.06] hover:bg-[#F3F4F6] transition-colors shadow-sm"
+              className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-[#0C3852] font-medium text-xs sm:text-sm border border-black/[0.08] hover:bg-[#F3F4F6] transition-colors shadow-sm"
             >
               <svg
                 className="w-4 h-4"
@@ -262,7 +285,7 @@ export default function ServiceSlugPage() {
             </Link>
 
             <span className="font-gochi text-[#2B7DA8] text-base sm:text-lg tracking-wider">
-              / SERVICE DETAILS
+              / {service.title.toUpperCase()}
             </span>
           </div>
 
@@ -276,11 +299,14 @@ export default function ServiceSlugPage() {
               className="object-cover object-center opacity-80"
             />
             {/* Dark gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0C3852]/90 via-[#0C3852]/40 to-transparent z-10" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0C3852]/95 via-[#0C3852]/50 to-transparent z-10" />
 
             {/* Content Over Hero Image */}
             <div className="absolute inset-0 z-20 p-6 sm:p-10 md:p-12 flex flex-col justify-end">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[72px] font-bold text-white tracking-tight leading-[1.05] mb-3">
+              <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-[#3CA8D9] mb-2">
+                Service Capabilities
+              </span>
+              <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-[70px] font-bold text-white tracking-tight leading-[1.05] mb-3">
                 {service.title}
               </h1>
               <p className="text-white/90 text-lg sm:text-xl md:text-2xl font-gochi tracking-wide">
@@ -293,20 +319,33 @@ export default function ServiceSlugPage() {
             {/* Left Content (Overview & Process) */}
             <div className="lg:col-span-8 flex flex-col">
               <div className="mb-12">
-                <h2 className="text-2xl sm:text-3xl font-bold text-[#111827] mb-6">Overview</h2>
+                <h2 className="text-2xl sm:text-3xl font-bold text-[#0C3852] mb-6">
+                  Overview
+                </h2>
                 <p className="text-[#38607A] text-base sm:text-lg leading-relaxed">
                   {service.description}
                 </p>
               </div>
 
               <div>
-                <h2 className="text-2xl sm:text-3xl font-bold text-[#111827] mb-8">Our Approach</h2>
+                <h2 className="text-2xl sm:text-3xl font-bold text-[#0C3852] mb-8">
+                  Our Approach
+                </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
                   {service.process.map((step, idx) => (
-                    <div key={idx} className="bg-white p-6 border border-black/[0.05] shadow-sm flex flex-col">
-                      <span className="text-[#3CA8D9] font-gochi text-2xl mb-2">0{idx + 1}</span>
-                      <h3 className="text-lg font-bold text-[#0C3852] mb-3">{step.heading}</h3>
-                      <p className="text-[#476B82] text-sm leading-relaxed">{step.description}</p>
+                    <div
+                      key={idx}
+                      className="bg-white p-6 sm:p-7 border border-black/[0.06] shadow-sm flex flex-col"
+                    >
+                      <span className="text-[#3CA8D9] font-gochi text-2xl sm:text-3xl mb-2">
+                        0{idx + 1}
+                      </span>
+                      <h3 className="text-lg sm:text-xl font-bold text-[#0C3852] mb-3">
+                        {step.heading}
+                      </h3>
+                      <p className="text-[#476B82] text-sm leading-relaxed">
+                        {step.description}
+                      </p>
                     </div>
                   ))}
                 </div>
@@ -315,7 +354,7 @@ export default function ServiceSlugPage() {
 
             {/* Right Sidebar (Tags & Deliverables) */}
             <div className="lg:col-span-4 flex flex-col gap-8">
-              <div className="bg-white p-6 sm:p-8 border border-black/[0.04] shadow-sm">
+              <div className="bg-white p-6 sm:p-8 border border-black/[0.06] shadow-sm">
                 <h3 className="text-sm font-bold uppercase tracking-wider text-[#0C3852] mb-5">
                   Disciplines
                 </h3>
@@ -348,14 +387,82 @@ export default function ServiceSlugPage() {
                 </ul>
               </div>
 
-              <div className="mt-4">
+              <div>
                 <Link
                   href="/contact"
-                  className="flex items-center justify-center w-full px-7 py-4 bg-gradient-to-b from-[#125883] via-[#0C4568] to-[#083550] text-white font-medium text-sm border-t border-white/25 border-b border-black/30 shadow-[inset_0_2px_4px_rgba(255,255,255,0.2),inset_0_-2px_5px_rgba(0,0,0,0.45)] hover:opacity-95 transition-opacity"
+                  className="flex items-center justify-center w-full px-7 py-4 bg-gradient-to-b from-[#125883] via-[#0C4568] to-[#083550] text-white font-medium text-sm sm:text-base border-t border-white/25 border-b border-black/30 shadow-[inset_0_2px_4px_rgba(255,255,255,0.2),inset_0_-2px_5px_rgba(0,0,0,0.45)] hover:opacity-95 transition-opacity"
                 >
                   Start a project
                 </Link>
               </div>
+            </div>
+          </div>
+
+          {/* Explore Other Services Section */}
+          <div className="mt-20 sm:mt-24 pt-12 sm:pt-16 border-t border-black/[0.08]">
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
+              <div>
+                <span className="font-gochi text-[#2B7DA8] text-base sm:text-lg tracking-wider block mb-1">
+                  / OTHER CAPABILITIES
+                </span>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#0C3852]">
+                  Explore Other Services
+                </h2>
+              </div>
+              <Link
+                href="/Service"
+                className="text-sm font-semibold text-[#2B7DA8] hover:text-[#0C3852] inline-flex items-center gap-1 transition-colors"
+              >
+                View all services
+                <svg
+                  className="w-4 h-4 ml-1"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </Link>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {otherServices.slice(0, 3).map((other) => (
+                <Link
+                  key={other.slug}
+                  href={`/Service/${other.slug}`}
+                  className="group bg-white p-6 sm:p-7 border border-black/[0.06] shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-300 flex flex-col justify-between"
+                >
+                  <div>
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="font-gochi text-xs text-[#2B7DA8] uppercase tracking-wider">
+                        {other.subtitle}
+                      </span>
+                      <div className="w-8 h-8 rounded-full bg-[#D9EFF9] text-[#0C3852] flex items-center justify-center group-hover:bg-[#0C3852] group-hover:text-white transition-colors">
+                        <svg className="w-3.5 h-3.5 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
+                        </svg>
+                      </div>
+                    </div>
+                    <h3 className="text-xl font-bold text-[#0C3852] group-hover:text-[#2575A5] transition-colors mb-2">
+                      {other.title}
+                    </h3>
+                    <p className="text-xs sm:text-sm text-[#476B82] line-clamp-3 leading-relaxed mb-4">
+                      {other.description}
+                    </p>
+                  </div>
+                  <div className="flex flex-wrap gap-1.5 pt-4 border-t border-black/[0.05]">
+                    {other.tags.slice(0, 3).map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-2.5 py-1 rounded-full bg-[#F3F4F6] text-[#0C3852] text-[11px] font-medium"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </Link>
+              ))}
             </div>
           </div>
         </div>

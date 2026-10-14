@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 import Navbar from "../component/navbar";
 import FAQSection from "../component/faq";
@@ -103,14 +103,6 @@ const servicesData: ServiceDetail[] = [
 ];
 
 export default function ServicesPage() {
-  const [openServiceIds, setOpenServiceIds] = useState<number[]>([1]);
-
-  const toggleService = (id: number) => {
-    setOpenServiceIds((prev) =>
-      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
-    );
-  };
-
   return (
     <div className="min-h-screen flex flex-col bg-[#FAFAFA] text-[#0C3852] font-sans selection:bg-[#3CA8D9] selection:text-white">
       {/* Navigation */}
@@ -176,106 +168,83 @@ export default function ServicesPage() {
             </div>
           </div>
 
-          {/* Interactive Capabilities / Services Accordion List */}
+          {/* Interactive Capabilities / Services List */}
           <div className="w-full border-t border-black/[0.1] pt-6 sm:pt-8">
             <div className="flex flex-col divide-y divide-black/[0.08]">
-              {servicesData.map((service) => {
-                const isOpen = openServiceIds.includes(service.id);
-
-                return (
-                  <div
-                    key={service.id}
-                    className="py-6 sm:py-8 transition-colors group"
-                  >
-                    {/* Header Row */}
-                    <button
-                      onClick={() => toggleService(service.id)}
-                      className="w-full flex flex-col md:flex-row md:items-center justify-between gap-4 text-left cursor-pointer select-none"
-                      aria-expanded={isOpen}
-                    >
-                      {/* Service Title */}
-                      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-medium text-[#0C3852] tracking-tight leading-tight group-hover:text-[#2575A5] transition-colors">
-                        {service.title}
-                      </h2>
-
-                      {/* Right Tags & Expand Button */}
-                      <div className="flex items-center gap-3 sm:gap-4 flex-wrap self-start md:self-auto">
-                        {/* Tags */}
+              {servicesData.map((service, index) => (
+                <Link
+                  key={service.id}
+                  href={`/Service/${service.slug}`}
+                  className="group block py-8 sm:py-10 transition-all hover:bg-black/[0.02] px-4 sm:px-6 -mx-4 sm:-mx-6 rounded-2xl cursor-pointer"
+                >
+                  <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-6">
+                    {/* Left Column: Number, Title, Tags, Description */}
+                    <div className="flex-1">
+                      <div className="flex items-center gap-4 mb-3">
+                        <span className="font-gochi text-[#2B7DA8] text-lg sm:text-xl font-bold">
+                          0{index + 1}
+                        </span>
                         <div className="flex items-center gap-2 flex-wrap">
                           {service.tags.map((tag) => (
                             <span
                               key={tag}
-                              className="px-3.5 py-1.5 rounded-full bg-[#D9EFF9] text-[#0C3852] text-xs sm:text-[13px] font-medium"
+                              className="px-3 py-1 rounded-full bg-[#D9EFF9] text-[#0C3852] text-xs font-medium"
                             >
                               {tag}
                             </span>
                           ))}
                         </div>
-
-                        {/* Circular Expand Button with Smooth Morphing + / — */}
-                        <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#D9EFF9] text-[#0C3852] flex items-center justify-center flex-shrink-0 group-hover:bg-[#C2E7F8] transition-colors">
-                          <div className="relative w-4 h-4 flex items-center justify-center">
-                            <span className="absolute w-3.5 h-[1.8px] bg-current rounded-full" />
-                            <span
-                              className={`absolute h-3.5 w-[1.8px] bg-current rounded-full transition-all duration-300 ease-in-out ${
-                                isOpen
-                                  ? "scale-y-0 opacity-0 rotate-90"
-                                  : "scale-y-100 opacity-100 rotate-0"
-                              }`}
-                            />
-                          </div>
-                        </div>
                       </div>
-                    </button>
 
-                    {/* Smooth Collapsible Content Drawer */}
-                    <div
-                      className={`grid transition-[grid-template-rows,opacity,margin,padding] duration-300 ease-out ${
-                        isOpen
-                          ? "grid-rows-[1fr] opacity-100 mt-6 pt-6 border-t border-black/[0.05]"
-                          : "grid-rows-[0fr] opacity-0 mt-0 pt-0 border-t-0"
-                      }`}
-                    >
-                      <div className="overflow-hidden">
-                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start py-2">
-                          <div className="lg:col-span-6">
-                            <p className="text-[#38607A] text-sm sm:text-base leading-relaxed mb-4">
-                              {service.description}
-                            </p>
-                          </div>
-                          <div className="lg:col-span-6">
-                            <h3 className="text-xs font-bold uppercase tracking-wider text-[#0C3852] mb-3">
-                              Key Deliverables
-                            </h3>
-                            <ul className="space-y-2">
-                              {service.deliverables.map((item, idx) => (
-                                <li
-                                  key={idx}
-                                  className="flex items-start text-xs sm:text-sm text-[#476B82]"
-                                >
-                                  <span className="w-1.5 h-1.5 rounded-full bg-[#3CA8D9] mt-1.5 mr-2.5 flex-shrink-0" />
-                                  <span>{item}</span>
-                                </li>
-                              ))}
-                            </ul>
-                            <div className="mt-6">
-                              <Link
-                                href={`/Service/${service.slug}`}
-                                className="inline-flex items-center text-sm font-semibold text-[#0C3852] hover:text-[#3CA8D9] transition-colors"
-                              >
-                                View full service details
-                                <svg className="w-4 h-4 ml-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                                  <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                </svg>
-                              </Link>
-                            </div>
-                          </div>
+                      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-medium text-[#0C3852] tracking-tight leading-tight group-hover:text-[#2575A5] transition-colors mb-3">
+                        {service.title}
+                      </h2>
+
+                      <p className="text-[#38607A] text-sm sm:text-base leading-relaxed max-w-2xl">
+                        {service.description}
+                      </p>
+                    </div>
+
+                    {/* Right Column: Key Deliverables & Circular Action Button */}
+                    <div className="lg:w-80 flex flex-col sm:flex-row lg:flex-col justify-between gap-4">
+                      <div>
+                        <h3 className="text-xs font-bold uppercase tracking-wider text-[#0C3852] mb-2.5">
+                          Key Deliverables
+                        </h3>
+                        <ul className="space-y-1.5">
+                          {service.deliverables.slice(0, 3).map((item, idx) => (
+                            <li
+                              key={idx}
+                              className="flex items-start text-xs sm:text-sm text-[#476B82]"
+                            >
+                              <span className="w-1.5 h-1.5 rounded-full bg-[#3CA8D9] mt-1.5 mr-2 flex-shrink-0" />
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div className="flex items-center gap-3 self-end sm:self-auto lg:self-end mt-2">
+                        <span className="text-xs sm:text-sm font-semibold text-[#0C3852] group-hover:text-[#2575A5] transition-colors">
+                          View service details
+                        </span>
+                        <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#D9EFF9] text-[#0C3852] flex items-center justify-center flex-shrink-0 group-hover:bg-[#0C3852] group-hover:text-white transition-all duration-300 group-hover:rotate-45 group-hover:scale-105 shadow-sm">
+                          <svg
+                            className="w-4 h-4 fill-none stroke-current stroke-[2.5]"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              d="M7 17L17 7M17 7H7M17 7V17"
+                            />
+                          </svg>
                         </div>
                       </div>
                     </div>
                   </div>
-                );
-              })}
+                </Link>
+              ))}
             </div>
           </div>
         </div>

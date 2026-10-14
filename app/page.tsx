@@ -434,8 +434,11 @@ export default function Home() {
             <div className="lg:col-span-6 flex flex-col gap-6">
               {/* Top Row: 2 Squares */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                {/* Brand Strategy (Orange) */}
-                <div className="group relative bg-[#FFA26B] p-7 sm:p-8 flex flex-col justify-between aspect-square cursor-pointer transition-transform duration-300 hover:-translate-y-1">
+                {/* Social Media Management (Orange) */}
+                <Link
+                  href="/Service/social-media-management"
+                  className="group relative bg-[#FFA26B] p-7 sm:p-8 flex flex-col justify-between aspect-square cursor-pointer transition-transform duration-300 hover:-translate-y-1 block shadow-sm"
+                >
                   {/* Top Row: Icon + Arrow */}
                   <div className="flex items-center justify-between">
                     {/* Clover Geometric Icon */}
@@ -465,10 +468,13 @@ export default function Home() {
                       Built to stay relevant.
                     </p>
                   </div>
-                </div>
+                </Link>
 
-                {/* Content Marketing (Yellow) */}
-                <div className="group relative bg-[#FFE635] p-7 sm:p-8 flex flex-col justify-between aspect-square cursor-pointer transition-transform duration-300 hover:-translate-y-1">
+                {/* Content Production (Yellow) */}
+                <Link
+                  href="/Service/content-production"
+                  className="group relative bg-[#FFE635] p-7 sm:p-8 flex flex-col justify-between aspect-square cursor-pointer transition-transform duration-300 hover:-translate-y-1 block shadow-sm"
+                >
                   {/* Top Row: Icon + Arrow */}
                   <div className="flex items-center justify-between">
                     {/* Targeted Box Icon */}
@@ -501,11 +507,14 @@ export default function Home() {
                       Made to be noticed.
                     </p>
                   </div>
-                </div>
+                </Link>
               </div>
 
-              {/* Bottom Wide Card: SEO Marketing (Sky Blue) */}
-              <div className="group relative bg-[#96D6F2] p-7 sm:p-8 sm:py-9 flex flex-col justify-between cursor-pointer transition-transform duration-300 hover:-translate-y-1 flex-1">
+              {/* Bottom Wide Card: Branding (Sky Blue) */}
+              <Link
+                href="/Service/branding"
+                className="group relative bg-[#96D6F2] p-7 sm:p-8 sm:py-9 flex flex-col justify-between cursor-pointer transition-transform duration-300 hover:-translate-y-1 flex-1 block shadow-sm"
+              >
                 {/* Top Row */}
                 <div className="flex items-start justify-between mb-8 sm:mb-10">
                   {/* Modern L-Box Icon */}
@@ -533,18 +542,97 @@ export default function Home() {
                     Made to be remembered.
                   </p>
                 </div>
-              </div>
+              </Link>
             </div>
 
-            {/* Right 6 Columns (Image Showcase) */}
-            <div className="lg:col-span-6 relative overflow-hidden min-h-[420px] lg:min-h-full bg-[#E9EEF3] group cursor-pointer">
-              <Image
-                src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=1200&auto=format&fit=crop&q=80"
-                alt="Creative Services"
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-              />
+            {/* Right 6 Columns */}
+            <div className="lg:col-span-6 flex flex-col gap-6">
+              {/* Top Wide Card: Influencer Marketing (Light Sky / Soft Blue) */}
+              <Link
+                href="/Service/influencer-marketing"
+                className="group relative bg-[#D9EFF9] p-7 sm:p-8 sm:py-9 flex flex-col justify-between cursor-pointer transition-transform duration-300 hover:-translate-y-1 flex-1 block shadow-sm"
+              >
+                <div className="flex items-start justify-between mb-8 sm:mb-10">
+                  <div className="w-9 h-9 flex items-center justify-center text-[#0C3852]">
+                    <svg className="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z" />
+                    </svg>
+                  </div>
+                  <div className="w-10 h-10 rounded-full bg-[#0C3852] text-white flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:rotate-45">
+                    <svg className="w-4 h-4 stroke-white stroke-[2.5]" fill="none" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
+                    </svg>
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="text-2xl sm:text-3xl font-black text-[#0C3852] tracking-tight uppercase leading-tight mb-1">
+                    INFLUENCER MARKETING
+                  </h3>
+                  <p className="font-gochi text-[#0C3852] text-base sm:text-lg mb-3">
+                    Built on influence.
+                  </p>
+                </div>
+              </Link>
+
+              {/* Bottom Row: 2 Squares */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {/* Performance Marketing (Mint Green) */}
+                <Link
+                  href="/Service/performance-marketing"
+                  className="group relative bg-[#BEE5D6] p-7 sm:p-8 flex flex-col justify-between aspect-square cursor-pointer transition-transform duration-300 hover:-translate-y-1 block shadow-sm"
+                >
+                  <div className="flex items-center justify-between">
+                    <div className="w-9 h-9 flex items-center justify-center text-[#0C3852]">
+                      <svg className="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                        <path d="M3.5 18.49l6-6.01 4 4L22 6.92l-1.41-1.41-7.09 7.97-4-4L2 16.99z" />
+                      </svg>
+                    </div>
+                    <div className="w-10 h-10 rounded-full bg-[#0C3852] text-white flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:rotate-45">
+                      <svg className="w-4 h-4 stroke-white stroke-[2.5]" fill="none" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
+                      </svg>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl sm:text-2xl font-black text-[#0C3852] tracking-tight uppercase leading-tight">
+                      PERFORMANCE <br /> MARKETING
+                    </h3>
+                    <p className="font-gochi text-[#0C3852] text-sm sm:text-base mt-2">
+                      Built to perform.
+                    </p>
+                  </div>
+                </Link>
+
+                {/* Website Design & Development (Warm Peach) */}
+                <Link
+                  href="/Service/website-design-development"
+                  className="group relative bg-[#FED7AA] p-7 sm:p-8 flex flex-col justify-between aspect-square cursor-pointer transition-transform duration-300 hover:-translate-y-1 block shadow-sm"
+                >
+                  <div className="flex items-center justify-between">
+                    <div className="w-9 h-9 flex items-center justify-center text-[#0C3852]">
+                      <svg className="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H4v-4h11v4zm0-5H4V9h11v4zm5 5h-4V9h4v9z" />
+                      </svg>
+                    </div>
+                    <div className="w-10 h-10 rounded-full bg-[#0C3852] text-white flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:rotate-45">
+                      <svg className="w-4 h-4 stroke-white stroke-[2.5]" fill="none" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
+                      </svg>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl sm:text-2xl font-black text-[#0C3852] tracking-tight uppercase leading-tight">
+                      WEBSITE DESIGN <br /> &amp; DEVELOPMENT
+                    </h3>
+                    <p className="font-gochi text-[#0C3852] text-sm sm:text-base mt-2">
+                      Built for the digital world.
+                    </p>
+                  </div>
+                </Link>
+              </div>
             </div>
           </div>
 
